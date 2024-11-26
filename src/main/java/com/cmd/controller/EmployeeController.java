@@ -32,6 +32,11 @@ public class EmployeeController {
         if (result.hasErrors()) {
             return new ResponseEntity<>(result.getFieldError().getDefaultMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
+        System.out.println(1000);
+        System.out.println(2000);
+        System.out.println(3000);
+        System.out.println(4000);
+            
         EmployeeDto employeeDto = employeeService.addEmployee(dto);
 
         return new ResponseEntity<>(employeeDto, HttpStatus.CREATED);
